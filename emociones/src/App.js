@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import IconButton from '@mui/material/IconButton';
 import FilterListIcon from '@mui/icons-material/FilterList';
 import FilterListOffIcon from '@mui/icons-material/FilterListOff';
@@ -6,22 +6,27 @@ import FilterListOffIcon from '@mui/icons-material/FilterListOff';
 import './App.css';
 import Emotion from './components/Emotion';
 
-let emotions = require("./emotions.json")
+let emotions_list = require("./emotions.json")
 
 function App() {
 
-  const [selected, setSelected] = useState([])
+  const [emotions, setEmotions] = useState([])
+  const [selected_emotions, setSelectedEmotions] = useState([])
   const [filtered, setFiltered] = useState(false)
 
+  useEffect(() => {
+    setEmotions(filtered ? selected_emotions : emotions_list)
+  }, [emotions_list, selected_emotions, filtered])
+
   const selectEmotion = (emotion) => {
-    let _selected = [...selected]
-    if (!_selected.includes(emotion)) {
-      _selected.push(emotion)
+    let _selected_emotions = [...selected_emotions]
+    if (!_selected_emotions.includes(emotion)) {
+      _selected_emotions.push(emotion)
     } else {
-      let index = _selected.indexOf(emotion)
-      _selected.splice(index, 1)
+      let index = _selected_emotions.indexOf(emotion)
+      _selected_emotions.splice(index, 1)
     }
-    setSelected(_selected)
+    setSelectedEmotions(_selected_emotions)
   }
 
   return (
@@ -35,7 +40,7 @@ function App() {
             return (
               <Emotion 
                 emotion={emotion}
-                selected={selected.includes(emotion)}
+                selected={selected_emotions.includes(emotion)}
                 key={emotion.name}
                 select={selectEmotion}
               />
