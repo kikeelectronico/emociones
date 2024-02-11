@@ -1,9 +1,13 @@
+import React, {useState} from "react";
 import './App.css';
 import Emotion from './components/Emotion';
 
 let emotions = require("./emotions.json")
 
 function App() {
+
+  const [selected, setSelected] = useState([])
+
   return (
     <div className="App">
       <header className="header">
@@ -13,7 +17,10 @@ function App() {
         {
           emotions.map(emotion => {
             return (
-              <Emotion emotion={emotion}/>
+              <Emotion 
+                emotion={emotion}
+                selected={selected.includes(emotion.name)}
+              />
             )
           })
         }

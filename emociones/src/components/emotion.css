@@ -8,6 +8,10 @@
     background-color: #d5e1e8;
 }
 
+.emotion-selected {
+   background-color: #b0c9d4; 
+}
+
 .emotion-name {
     font-size: 20px;
     color: #33495D;
