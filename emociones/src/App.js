@@ -48,27 +48,27 @@ function App() {
             )
           })
         }
-      </section>
-      <section className="buttons">
-        <IconButton
-          aria-label="Mostrar emociones seleccionadas"
-          onClick={() => setFiltered(!filtered)}
-        >
-          {
-            !filtered ? <FilterListIcon className="iconButton"/> : <FilterListOffIcon  className="iconButton"/>
-          }
-        </IconButton>
-        {
-          selected_emotions.length > 0 ?         
+      </section>    
+      {
+        selected_emotions.length > 0 ?
+          <section className="buttons">   
+            <IconButton
+              aria-label="Mostrar emociones seleccionadas"
+              onClick={() => setFiltered(!filtered)}
+            >
+              {
+                !filtered ? <FilterListIcon className="iconButton"/> : <FilterListOffIcon  className="iconButton"/>
+              }
+            </IconButton>    
             <IconButton
               aria-label="Deseleccinar todas"
               onClick={() => setSelectedEmotions([])}
             >
               <DeselectIcon/>
             </IconButton>
-          : <></>
-        }
-      </section>
+          </section>
+        : <></>
+      }
     </div>
   );
 }
