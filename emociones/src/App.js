@@ -19,6 +19,11 @@ function App() {
     setEmotions(filtered ? selected_emotions : emotions_list)
   }, [emotions_list, selected_emotions, filtered])
 
+  useEffect(() => {
+    if (selected_emotions.length === 0)
+      setFiltered(false)
+  }, [selected_emotions])
+
   const selectEmotion = (emotion) => {
     let _selected_emotions = [...selected_emotions]
     if (!_selected_emotions.includes(emotion)) {
