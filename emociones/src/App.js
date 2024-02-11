@@ -13,12 +13,12 @@ function App() {
   const [selected, setSelected] = useState([])
   const [filtered, setFiltered] = useState(false)
 
-  const selectEmotion = (emotion_name) => {
+  const selectEmotion = (emotion) => {
     let _selected = [...selected]
-    if (!_selected.includes(emotion_name)) {
-      _selected.push(emotion_name)
+    if (!_selected.includes(emotion)) {
+      _selected.push(emotion)
     } else {
-      let index = _selected.indexOf(emotion_name)
+      let index = _selected.indexOf(emotion)
       _selected.splice(index, 1)
     }
     setSelected(_selected)
@@ -35,7 +35,7 @@ function App() {
             return (
               <Emotion 
                 emotion={emotion}
-                selected={selected.includes(emotion.name)}
+                selected={selected.includes(emotion)}
                 key={emotion.name}
                 select={selectEmotion}
               />
