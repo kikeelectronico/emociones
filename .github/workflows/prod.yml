@@ -26,7 +26,7 @@ jobs:
         gcloud auth configure-docker $RUN_REGION-docker.pkg.dev
     - name: Build
       run: |
-        docker build -t "$RUN_REGION-docker.pkg.dev/$PROJECT_ID/emotions/$SERVICE_NAME:latest" \
+        docker build -t "$RUN_REGION-docker.pkg.dev/$PROJECT_ID/emotions/$SERVICE_NAME:latest" .
     - name: Detele previous images
       run: gcloud container images delete "$RUN_REGION-docker.pkg.dev/$PROJECT_ID/emotions/$SERVICE_NAME:latest" --force-delete-tags
       continue-on-error: true
