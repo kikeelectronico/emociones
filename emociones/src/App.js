@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react";
 import IconButton from '@mui/material/IconButton';
 import FilterListIcon from '@mui/icons-material/FilterList';
 import FilterListOffIcon from '@mui/icons-material/FilterListOff';
+import DeselectIcon from '@mui/icons-material/Deselect';
 
 import './App.css';
 import Emotion from './components/Emotion';
@@ -57,6 +58,16 @@ function App() {
             !filtered ? <FilterListIcon className="iconButton"/> : <FilterListOffIcon  className="iconButton"/>
           }
         </IconButton>
+        {
+          selected_emotions.length > 0 ?         
+            <IconButton
+              aria-label="Deseleccinar todas"
+              onClick={() => setSelectedEmotions([])}
+            >
+              <DeselectIcon/>
+            </IconButton>
+          : <></>
+        }
       </section>
     </div>
   );
