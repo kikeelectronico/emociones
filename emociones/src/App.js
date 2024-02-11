@@ -1,4 +1,8 @@
 import React, {useState} from "react";
+import IconButton from '@mui/material/IconButton';
+import FilterListIcon from '@mui/icons-material/FilterList';
+import FilterListOffIcon from '@mui/icons-material/FilterListOff';
+
 import './App.css';
 import Emotion from './components/Emotion';
 
@@ -7,6 +11,7 @@ let emotions = require("./emotions.json")
 function App() {
 
   const [selected, setSelected] = useState([])
+  const [filtered, setFiltered] = useState(false)
 
   const selectEmotion = (emotion_name) => {
     let _selected = [...selected]
@@ -16,7 +21,6 @@ function App() {
       let index = _selected.indexOf(emotion_name)
       _selected.splice(index, 1)
     }
-
     setSelected(_selected)
   }
 
@@ -38,6 +42,13 @@ function App() {
             )
           })
         }
+      </section>
+      <section className="buttons">
+        <IconButton color="primary" aria-label="Mostrar emociones seleccionadas">
+          {
+            !filtered ? <FilterListIcon/> : <FilterListOffIcon/>
+          }
+        </IconButton>
       </section>
     </div>
   );
