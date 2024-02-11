@@ -4,6 +4,7 @@
 
 .header {
   height: 60px;
+  margin-bottom: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -13,5 +14,10 @@
 
 .header > h1 {
   margin: 0px;
-  color: #6d8395;
+  color: #35495A;
+}
+
+.emotions {
+  width: 90%;
+  margin-left: 5%;
 }
