@@ -1,8 +1,341 @@
 [
     {
+        "name": "Aburrimiento"
+    },
+    {
         "name": "Alegría"
     },
     {
+        "name": "Alivio"
+    },
+    {
+        "name": "Amor"
+    },
+    {
+        "name": "Angustia"
+    },
+    {
+        "name": "Ansiedad"
+    },
+    {
+        "name": "Añoranza"
+    },
+    {
         "name": "Apatía"
+    },
+    {
+        "name": "Apego"
+    },
+    {
+        "name": "Armonía"
+    },
+    {
+        "name": "Arrojo"
+    },
+    {
+        "name": "Asco"
+    },
+    {
+        "name": "Asombro"
+    },
+    {
+        "name": "Calma"
+    },
+    {
+        "name": "Cariño"
+    },
+    {
+        "name": "Celos"
+    },
+    {
+        "name": "Cólera"
+    },
+    {
+        "name": "Compasión"
+    },
+    {
+        "name": "Confianza"
+    },
+    {
+        "name": "Confusión"
+    },
+    {
+        "name": "Congoja"
+    },
+    {
+        "name": "Culpa"
+    },
+    {
+        "name": "Curiosidad"
+    },
+    {
+        "name": "Decepción"
+    },
+    {
+        "name": "Depresión"
+    },
+    {
+        "name": "Desamparo"
+    },
+    {
+        "name": "Desamor"
+    },
+    {
+        "name": "Desánimo"
+    },
+    {
+        "name": "Desasosiego"
+    },
+    {
+        "name": "Desconcierto"
+    },
+    {
+        "name": "Desconfianza"
+    },
+    {
+        "name": "Desconsuelo"
+    },
+    {
+        "name": "Deseo"
+    },
+    {
+        "name": "Desesperación"
+    },
+    {
+        "name": "Desgano"
+    },
+    {
+        "name": "Desidia"
+    },
+    {
+        "name": "Desolación"
+    },
+    {
+        "name": "Desprecio"
+    },
+    {
+        "name": "Dolor"
+    },
+    {
+        "name": "Duelo"
+    },
+    {
+        "name": "Ecuanimidad"
+    },
+    {
+        "name": "Enfado"
+    },
+    {
+        "name": "Enojo"
+    },
+    {
+        "name": "Entusiasmo"
+    },
+    {
+        "name": "Envidia"
+    },
+    {
+        "name": "Empatía"
+    },
+    {
+        "name": "Espanto"
+    },
+    {
+        "name": "Esperanza"
+    },
+    {
+        "name": "Estupor"
+    },
+    {
+        "name": "Euforia"
+    },
+    {
+        "name": "Excitación"
+    },
+    {
+        "name": "Éxtasis"
+    },
+    {
+        "name": "Fastidio"
+    },
+    {
+        "name": "Frustación"
+    },
+    {
+        "name": "Fobia"
+    },
+    {
+        "name": "Hastío"
+    },
+    {
+        "name": "Hostilidad"
+    },
+    {
+        "name": "Humillación"
+    },
+    {
+        "name": "Impaciencia"
+    },
+    {
+        "name": "Impotencia"
+    },
+    {
+        "name": "Indiferencia"
+    },
+    {
+        "name": "Indignación"
+    },
+    {
+        "name": "Inquietud"
+    },
+    {
+        "name": "Insatisfacción"
+    },
+    {
+        "name": "Inseguridad"
+    },
+    {
+        "name": "Interes"
+    },
+    {
+        "name": "Intriga"
+    },
+    {
+        "name": "Ira"
+    },
+    {
+        "name": "Irritación"
+    },
+    {
+        "name": "Lujuria"
+    },
+    {
+        "name": "Melancolía"
+    },
+    {
+        "name": "Mezquindad"
+    },
+    {
+        "name": "Miedo"
+    },
+    {
+        "name": "Nostalgia"
+    },
+    {
+        "name": "Obnubilación"
+    },
+    {
+        "name": "Obstinación"
+    },
+    {
+        "name": "Odio"
+    },
+    {
+        "name": "Omnipotencia"
+    },
+    {
+        "name": "Optimismo"
+    },
+    {
+        "name": "Paciencia"
+    },
+    {
+        "name": "Pánico"
+    },
+    {
+        "name": "Pasión"
+    },
+    {
+        "name": "Pena"
+    },
+    {
+        "name": "Pereza"
+    },
+    {
+        "name": "Pesimismo"
+    },
+    {
+        "name": "Placer"
+    },
+    {
+        "name": "Plenitud"
+    },
+    {
+        "name": "Prepotencia"
+    },
+    {
+        "name": "Rabia"
+    },
+    {
+        "name": "Rebeldía"
+    },
+    {
+        "name": "Recelo"
+    },
+    {
+        "name": "Rechazo"
+    },
+    {
+        "name": "Regocijo"
+    },
+    {
+        "name": "Rencor"
+    },
+    {
+        "name": "Repudio"
+    },
+    {
+        "name": "Resentimiento"
+    },
+    {
+        "name": "Resignación"
+    },
+    {
+        "name": "Resquemor"
+    },
+    {
+        "name": "Satisfacción"
+    },
+    {
+        "name": "Seguridad"
+    },
+    {
+        "name": "Serenidad"
+    },
+    {
+        "name": "Solidaridad"
+    },
+    {
+        "name": "Sorpresa"
+    },
+    {
+        "name": "Temor"
+    },
+    {
+        "name": "Templanza"
+    },
+    {
+        "name": "Ternura"
+    },
+    {
+        "name": "Terror"
+    },
+    {
+        "name": "Timidez"
+    },
+    {
+        "name": "Tranquilidad"
+    },
+    {
+        "name": "Tristeza"
+    },
+    {
+        "name": "Vacío existencial"
+    },
+    {
+        "name": "Valentía"
+    },
+    {
+        "name": "Vergüenza"
     }
 ]
