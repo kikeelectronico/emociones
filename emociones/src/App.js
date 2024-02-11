@@ -1,6 +1,8 @@
 import './App.css';
 import Emotion from './components/Emotion';
 
+let emotions = require("./emotions.json")
+
 function App() {
   return (
     <div className="App">
@@ -8,7 +10,13 @@ function App() {
        <h1>Emociones</h1>
       </header>
       <section className="emotions">
-        <Emotion/>
+        {
+          emotions.map(emotion => {
+            return (
+              <Emotion emotion={emotion}/>
+            )
+          })
+        }
       </section>
     </div>
   );

@@ -1,12 +1,12 @@
 import React from "react";
 import "./emotion.css"
 
-export default function Emotion() {
+export default function Emotion(props) {
 
   return (
     <div className="emotion-container">
         <span className="emotion-name">
-            Alegría
+            {props.emotion.name}
         </span>
     </div>
   )
