@@ -44,7 +44,11 @@ function App() {
         }
       </section>
       <section className="buttons">
-        <IconButton color="primary" aria-label="Mostrar emociones seleccionadas">
+        <IconButton
+          color="primary"
+          aria-label="Mostrar emociones seleccionadas"
+          onClick={() => setFiltered(!filtered)}
+        >
           {
             !filtered ? <FilterListIcon/> : <FilterListOffIcon/>
           }
