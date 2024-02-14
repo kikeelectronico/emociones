@@ -6,6 +6,7 @@ import DeselectIcon from '@mui/icons-material/Deselect';
 
 import './App.css';
 import Emotion from './components/Emotion';
+import Footer from "./components/Footer";
 
 let emotions_list = require("./emotions.json")
 
@@ -77,22 +78,25 @@ function App() {
           })
         }
       </section>    
-        <section className="buttons">   
-          <IconButton
-            aria-label="Mostrar emociones seleccionadas"
-            onClick={() => setFiltered(!filtered)}
-          >
-            {
-              !filtered ? <FilterListIcon className="iconButton"/> : <FilterListOffIcon  className="iconButton"/>
-            }
-          </IconButton>    
-          <IconButton
-            aria-label="Deseleccinar todas"
-            onClick={() => unselectAll()}
-          >
-            <DeselectIcon/>
-          </IconButton>
-        </section>
+      <section className="buttons">   
+        <IconButton
+          aria-label="Mostrar emociones seleccionadas"
+          onClick={() => setFiltered(!filtered)}
+        >
+          {
+            !filtered ? <FilterListIcon className="iconButton"/> : <FilterListOffIcon  className="iconButton"/>
+          }
+        </IconButton>    
+        <IconButton
+          aria-label="Deseleccinar todas"
+          onClick={() => unselectAll()}
+        >
+          <DeselectIcon/>
+        </IconButton>
+      </section>
+      {
+        !filtered ? <Footer/> : <></>
+      }
     </div>
   );
 }
