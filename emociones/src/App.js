@@ -12,27 +12,29 @@ let emotions_list = require("./emotions.json")
 function App() {
 
   const [emotions, setEmotions] = useState([])
-  const [selected_emotions, setSelectedEmotions] = useState([])
   const [filtered, setFiltered] = useState(false)
 
   useEffect(() => {
-    setEmotions(filtered ? selected_emotions : emotions_list)
-  }, [emotions_list, selected_emotions, filtered])
-
-  useEffect(() => {
-    if (selected_emotions.length === 0)
-      setFiltered(false)
-  }, [selected_emotions])
+    setEmotions(emotions_list)
+  }, [emotions_list])
 
   const selectEmotion = (emotion) => {
-    let _selected_emotions = [...selected_emotions]
-    if (!_selected_emotions.includes(emotion)) {
-      _selected_emotions.push(emotion)
-    } else {
-      let index = _selected_emotions.indexOf(emotion)
-      _selected_emotions.splice(index, 1)
+    let _emotions = [...emotions]
+    for(let i = 0; i < _emotions.length; i++) {
+      if (_emotions[i].name === emotion.name) {
+        _emotions[i].selected = !_emotions[i].selected
+        setEmotions(_emotions)
+        break
+      }
     }
-    setSelectedEmotions(_selected_emotions)
+  }
+
+  const unselectAll = () => {
+    let _emotions = [...emotions]
+    for(let i = 0; i < _emotions.length; i++) {
+      _emotions[i].selected = false
+    }
+    setEmotions(_emotions)
   }
 
   return (
@@ -44,36 +46,37 @@ function App() {
         {
           emotions.map(emotion => {
             return (
-              <Emotion 
-                emotion={emotion}
-                selected={selected_emotions.includes(emotion)}
-                key={emotion.name}
-                select={selectEmotion}
-              />
+              <>
+                {
+                  !filtered || (filtered && emotion.selected) ?
+                    <Emotion 
+                      emotion={emotion}
+                      key={emotion.name}
+                      select={selectEmotion}
+                    />
+                  : <></>
+                }
+              </>
             )
           })
         }
       </section>    
-      {
-        selected_emotions.length > 0 ?
-          <section className="buttons">   
-            <IconButton
-              aria-label="Mostrar emociones seleccionadas"
-              onClick={() => setFiltered(!filtered)}
-            >
-              {
-                !filtered ? <FilterListIcon className="iconButton"/> : <FilterListOffIcon  className="iconButton"/>
-              }
-            </IconButton>    
-            <IconButton
-              aria-label="Deseleccinar todas"
-              onClick={() => setSelectedEmotions([])}
-            >
-              <DeselectIcon/>
-            </IconButton>
-          </section>
-        : <></>
-      }
+        <section className="buttons">   
+          <IconButton
+            aria-label="Mostrar emociones seleccionadas"
+            onClick={() => setFiltered(!filtered)}
+          >
+            {
+              !filtered ? <FilterListIcon className="iconButton"/> : <FilterListOffIcon  className="iconButton"/>
+            }
+          </IconButton>    
+          <IconButton
+            aria-label="Deseleccinar todas"
+            onClick={() => unselectAll()}
+          >
+            <DeselectIcon/>
+          </IconButton>
+        </section>
     </div>
   );
 }

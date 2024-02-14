@@ -5,7 +5,7 @@ export default function Emotion(props) {
 
   return (
     <div
-        className={"emotion-container" + (props.selected ? " emotion-selected" : "")}        
+        className={"emotion-container" + (props.emotion.selected ? " emotion-selected" : "")}        
         onClick={() => {props.select(props.emotion)}}
     >
         <span className="emotion-name">

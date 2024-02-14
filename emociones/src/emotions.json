@@ -1,341 +1,454 @@
 [
     {
-        "name": "Aburrimiento"
+        "name": "Aburrimiento",
+        "selected": false
     },
     {
-        "name": "Alegría"
+        "name": "Alegría",
+        "selected": false
     },
     {
-        "name": "Alivio"
+        "name": "Alivio",
+        "selected": false
     },
     {
-        "name": "Amor"
+        "name": "Amor",
+        "selected": false
     },
     {
-        "name": "Angustia"
+        "name": "Angustia",
+        "selected": false
     },
     {
-        "name": "Ansiedad"
+        "name": "Ansiedad",
+        "selected": false
     },
     {
-        "name": "Añoranza"
+        "name": "Añoranza",
+        "selected": false
     },
     {
-        "name": "Apatía"
+        "name": "Apatía",
+        "selected": false
     },
     {
-        "name": "Apego"
+        "name": "Apego",
+        "selected": false
     },
     {
-        "name": "Armonía"
+        "name": "Armonía",
+        "selected": false
     },
     {
-        "name": "Arrojo"
+        "name": "Arrojo",
+        "selected": false
     },
     {
-        "name": "Asco"
+        "name": "Asco",
+        "selected": false
     },
     {
-        "name": "Asombro"
+        "name": "Asombro",
+        "selected": false
     },
     {
-        "name": "Calma"
+        "name": "Calma",
+        "selected": false
     },
     {
-        "name": "Cariño"
+        "name": "Cariño",
+        "selected": false
     },
     {
-        "name": "Celos"
+        "name": "Celos",
+        "selected": false
     },
     {
-        "name": "Cólera"
+        "name": "Cólera",
+        "selected": false
     },
     {
-        "name": "Compasión"
+        "name": "Compasión",
+        "selected": false
     },
     {
-        "name": "Confianza"
+        "name": "Confianza",
+        "selected": false
     },
     {
-        "name": "Confusión"
+        "name": "Confusión",
+        "selected": false
     },
     {
-        "name": "Congoja"
+        "name": "Congoja",
+        "selected": false
     },
     {
-        "name": "Culpa"
+        "name": "Culpa",
+        "selected": false
     },
     {
-        "name": "Curiosidad"
+        "name": "Curiosidad",
+        "selected": false
     },
     {
-        "name": "Decepción"
+        "name": "Decepción",
+        "selected": false
     },
     {
-        "name": "Depresión"
+        "name": "Depresión",
+        "selected": false
     },
     {
-        "name": "Desamparo"
+        "name": "Desamparo",
+        "selected": false
     },
     {
-        "name": "Desamor"
+        "name": "Desamor",
+        "selected": false
     },
     {
-        "name": "Desánimo"
+        "name": "Desánimo",
+        "selected": false
     },
     {
-        "name": "Desasosiego"
+        "name": "Desasosiego",
+        "selected": false
     },
     {
-        "name": "Desconcierto"
+        "name": "Desconcierto",
+        "selected": false
     },
     {
-        "name": "Desconfianza"
+        "name": "Desconfianza",
+        "selected": false
     },
     {
-        "name": "Desconsuelo"
+        "name": "Desconsuelo",
+        "selected": false
     },
     {
-        "name": "Deseo"
+        "name": "Deseo",
+        "selected": false
     },
     {
-        "name": "Desesperación"
+        "name": "Desesperación",
+        "selected": false
     },
     {
-        "name": "Desgano"
+        "name": "Desgano",
+        "selected": false
     },
     {
-        "name": "Desidia"
+        "name": "Desidia",
+        "selected": false
     },
     {
-        "name": "Desolación"
+        "name": "Desolación",
+        "selected": false
     },
     {
-        "name": "Desprecio"
+        "name": "Desprecio",
+        "selected": false
     },
     {
-        "name": "Dolor"
+        "name": "Dolor",
+        "selected": false
     },
     {
-        "name": "Duelo"
+        "name": "Duelo",
+        "selected": false
     },
     {
-        "name": "Ecuanimidad"
+        "name": "Ecuanimidad",
+        "selected": false
     },
     {
-        "name": "Enfado"
+        "name": "Enfado",
+        "selected": false
     },
     {
-        "name": "Enojo"
+        "name": "Enojo",
+        "selected": false
     },
     {
-        "name": "Entusiasmo"
+        "name": "Entusiasmo",
+        "selected": false
     },
     {
-        "name": "Envidia"
+        "name": "Envidia",
+        "selected": false
     },
     {
-        "name": "Empatía"
+        "name": "Empatía",
+        "selected": false
     },
     {
-        "name": "Espanto"
+        "name": "Espanto",
+        "selected": false
     },
     {
-        "name": "Esperanza"
+        "name": "Esperanza",
+        "selected": false
     },
     {
-        "name": "Estupor"
+        "name": "Estupor",
+        "selected": false
     },
     {
-        "name": "Euforia"
+        "name": "Euforia",
+        "selected": false
     },
     {
-        "name": "Excitación"
+        "name": "Excitación",
+        "selected": false
     },
     {
-        "name": "Éxtasis"
+        "name": "Éxtasis",
+        "selected": false
     },
     {
-        "name": "Fastidio"
+        "name": "Fastidio",
+        "selected": false
     },
     {
-        "name": "Frustación"
+        "name": "Frustación",
+        "selected": false
     },
     {
-        "name": "Fobia"
+        "name": "Fobia",
+        "selected": false
     },
     {
-        "name": "Hastío"
+        "name": "Hastío",
+        "selected": false
     },
     {
-        "name": "Hostilidad"
+        "name": "Hostilidad",
+        "selected": false
     },
     {
-        "name": "Humillación"
+        "name": "Humillación",
+        "selected": false
     },
     {
-        "name": "Impaciencia"
+        "name": "Impaciencia",
+        "selected": false
     },
     {
-        "name": "Impotencia"
+        "name": "Impotencia",
+        "selected": false
     },
     {
-        "name": "Indiferencia"
+        "name": "Indiferencia",
+        "selected": false
     },
     {
-        "name": "Indignación"
+        "name": "Indignación",
+        "selected": false
     },
     {
-        "name": "Inquietud"
+        "name": "Inquietud",
+        "selected": false
     },
     {
-        "name": "Insatisfacción"
+        "name": "Insatisfacción",
+        "selected": false
     },
     {
-        "name": "Inseguridad"
+        "name": "Inseguridad",
+        "selected": false
     },
     {
-        "name": "Interes"
+        "name": "Interes",
+        "selected": false
     },
     {
-        "name": "Intriga"
+        "name": "Intriga",
+        "selected": false
     },
     {
-        "name": "Ira"
+        "name": "Ira",
+        "selected": false
     },
     {
-        "name": "Irritación"
+        "name": "Irritación",
+        "selected": false
     },
     {
-        "name": "Lujuria"
+        "name": "Lujuria",
+        "selected": false
     },
     {
-        "name": "Melancolía"
+        "name": "Melancolía",
+        "selected": false
     },
     {
-        "name": "Mezquindad"
+        "name": "Mezquindad",
+        "selected": false
     },
     {
-        "name": "Miedo"
+        "name": "Miedo",
+        "selected": false
     },
     {
-        "name": "Nostalgia"
+        "name": "Nostalgia",
+        "selected": false
     },
     {
-        "name": "Obnubilación"
+        "name": "Obnubilación",
+        "selected": false
     },
     {
-        "name": "Obstinación"
+        "name": "Obstinación",
+        "selected": false
     },
     {
-        "name": "Odio"
+        "name": "Odio",
+        "selected": false
     },
     {
-        "name": "Omnipotencia"
+        "name": "Omnipotencia",
+        "selected": false
     },
     {
-        "name": "Optimismo"
+        "name": "Optimismo",
+        "selected": false
     },
     {
-        "name": "Paciencia"
+        "name": "Paciencia",
+        "selected": false
     },
     {
-        "name": "Pánico"
+        "name": "Pánico",
+        "selected": false
     },
     {
-        "name": "Pasión"
+        "name": "Pasión",
+        "selected": false
     },
     {
-        "name": "Pena"
+        "name": "Pena",
+        "selected": false
     },
     {
-        "name": "Pereza"
+        "name": "Pereza",
+        "selected": false
     },
     {
-        "name": "Pesimismo"
+        "name": "Pesimismo",
+        "selected": false
     },
     {
-        "name": "Placer"
+        "name": "Placer",
+        "selected": false
     },
     {
-        "name": "Plenitud"
+        "name": "Plenitud",
+        "selected": false
     },
     {
-        "name": "Prepotencia"
+        "name": "Prepotencia",
+        "selected": false
     },
     {
-        "name": "Rabia"
+        "name": "Rabia",
+        "selected": false
     },
     {
-        "name": "Rebeldía"
+        "name": "Rebeldía",
+        "selected": false
     },
     {
-        "name": "Recelo"
+        "name": "Recelo",
+        "selected": false
     },
     {
-        "name": "Rechazo"
+        "name": "Rechazo",
+        "selected": false
     },
     {
-        "name": "Regocijo"
+        "name": "Regocijo",
+        "selected": false
     },
     {
-        "name": "Rencor"
+        "name": "Rencor",
+        "selected": false
     },
     {
-        "name": "Repudio"
+        "name": "Repudio",
+        "selected": false
     },
     {
-        "name": "Resentimiento"
+        "name": "Resentimiento",
+        "selected": false
     },
     {
-        "name": "Resignación"
+        "name": "Resignación",
+        "selected": false
     },
     {
-        "name": "Resquemor"
+        "name": "Resquemor",
+        "selected": false
     },
     {
-        "name": "Satisfacción"
+        "name": "Satisfacción",
+        "selected": false
     },
     {
-        "name": "Seguridad"
+        "name": "Seguridad",
+        "selected": false
     },
     {
-        "name": "Serenidad"
+        "name": "Serenidad",
+        "selected": false
     },
     {
-        "name": "Solidaridad"
+        "name": "Solidaridad",
+        "selected": false
     },
     {
-        "name": "Sorpresa"
+        "name": "Sorpresa",
+        "selected": false
     },
     {
-        "name": "Temor"
+        "name": "Temor",
+        "selected": false
     },
     {
-        "name": "Templanza"
+        "name": "Templanza",
+        "selected": false
     },
     {
-        "name": "Ternura"
+        "name": "Ternura",
+        "selected": false
     },
     {
-        "name": "Terror"
+        "name": "Terror",
+        "selected": false
     },
     {
-        "name": "Timidez"
+        "name": "Timidez",
+        "selected": false
     },
     {
-        "name": "Tranquilidad"
+        "name": "Tranquilidad",
+        "selected": false
     },
     {
-        "name": "Tristeza"
+        "name": "Tristeza",
+        "selected": false
     },
     {
-        "name": "Vacío existencial"
+        "name": "Vacío existencial",
+        "selected": false
     },
     {
-        "name": "Valentía"
+        "name": "Valentía",
+        "selected": false
     },
     {
-        "name": "Vergüenza"
+        "name": "Vergüenza",
+        "selected": false
     }
 ]
