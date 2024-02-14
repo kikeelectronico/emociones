@@ -14,6 +14,7 @@ function App() {
 
   const [emotions, setEmotions] = useState([])
   const [filtered, setFiltered] = useState(null)
+  const [menu_y_delta, setMenuYDelta] = useState(0)
 
   useEffect(() => {
     let local_emotions = localStorage.getItem("emotions")
@@ -34,6 +35,16 @@ function App() {
     if (filtered !== null)
       localStorage.setItem("filtered", filtered)
   }, [filtered])
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      var scrollMaxY = window.scrollMaxY || (document.documentElement.scrollHeight - document.documentElement.clientHeight)
+      if (window.scrollY > scrollMaxY - 42) {
+        setMenuYDelta(42 - (scrollMaxY - window.scrollY))
+      } else 
+        setMenuYDelta(0)
+    })
+  }, [])
 
   const selectEmotion = (emotion) => {
     let _emotions = [...emotions]
@@ -78,7 +89,7 @@ function App() {
           })
         }
       </section>    
-      <section className="buttons">   
+      <section className="buttons" style={{bottom: menu_y_delta}}>   
         <IconButton
           aria-label="Mostrar emociones seleccionadas"
           onClick={() => setFiltered(!filtered)}
