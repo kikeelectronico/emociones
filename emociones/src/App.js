@@ -12,7 +12,7 @@ let emotions_list = require("./emotions.json")
 function App() {
 
   const [emotions, setEmotions] = useState([])
-  const [filtered, setFiltered] = useState(false)
+  const [filtered, setFiltered] = useState(null)
 
   useEffect(() => {
     let local_emotions = localStorage.getItem("emotions")
@@ -20,9 +20,19 @@ function App() {
   }, [emotions_list])
 
   useEffect(() => {
+    let local_filtered = localStorage.getItem("filtered")
+    setFiltered(local_filtered === "true")
+  }, [])
+
+  useEffect(() => {
     if (emotions.length > 0)
       localStorage.setItem("emotions", JSON.stringify(emotions))
   }, [emotions])
+
+  useEffect(() => {
+    if (filtered !== null)
+      localStorage.setItem("filtered", filtered)
+  }, [filtered])
 
   const selectEmotion = (emotion) => {
     let _emotions = [...emotions]
