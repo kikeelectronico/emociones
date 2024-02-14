@@ -17,7 +17,7 @@ function App() {
   useEffect(() => {
     let local_emotions = localStorage.getItem("emotions")
     setEmotions(local_emotions ? JSON.parse(local_emotions) : emotions_list)
-  }, [emotions_list])
+  }, [])
 
   useEffect(() => {
     let local_filtered = localStorage.getItem("filtered")
