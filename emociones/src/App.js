@@ -47,7 +47,7 @@ function App() {
           setMenuYDelta(0)
       }
     })
-  }, [])
+  }, [filtered])
 
   const selectEmotion = (emotion) => {
     let _emotions = [...emotions]
