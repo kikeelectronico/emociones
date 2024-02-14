@@ -34,14 +34,15 @@ function App() {
   useEffect(() => {
     if (filtered !== null)
       localStorage.setItem("filtered", filtered)
+      if (filtered) setMenuYDelta(0)
   }, [filtered])
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
       var scrollMaxY = window.scrollMaxY || (document.documentElement.scrollHeight - document.documentElement.clientHeight)
-      if (window.scrollY > scrollMaxY - 42) {
+      if (window.scrollY > scrollMaxY - 42)
         setMenuYDelta(42 - (scrollMaxY - window.scrollY))
-      } else 
+      else 
         setMenuYDelta(0)
     })
   }, [])
