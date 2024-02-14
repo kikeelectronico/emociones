@@ -12,3 +12,8 @@
 .main-footer-text {
     color: #33495D;
 }
+
+.main-footer-text > a {
+    color: #33495D;
+    text-decoration: none;
+}
