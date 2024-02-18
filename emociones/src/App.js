@@ -42,7 +42,7 @@ function App() {
       var scrollMaxY = window.scrollMaxY || (document.documentElement.scrollHeight - document.documentElement.clientHeight)
       if (scrollMaxY !== 0 && window.scrollY !== 0) {
         if ((window.scrollY > (scrollMaxY - 42)) && (!filtered))
-          setMenuYDelta(42 - (scrollMaxY - window.scrollY))
+          setMenuYDelta(41 - (scrollMaxY - window.scrollY))
         else 
           setMenuYDelta(0)
       }
