@@ -4,8 +4,6 @@ import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import TextField from '@mui/material/TextField';
 import "./emotion.css"
 
-let update_timeout = 0
-
 export default function Emotion(props) {
 
   const [expanded, setExpanded] = useState(false)
@@ -16,11 +14,11 @@ export default function Emotion(props) {
   }, [props.emotion])
 
   useEffect(() => {
-    const delayDebounceFn = setTimeout(() => {
+    const update_timeout = setTimeout(() => {
       props.updateEmotion(emotion)
     }, 1000)
 
-    return () => clearTimeout(delayDebounceFn)
+    return () => clearTimeout(update_timeout)
   }, [emotion])
 
   const toggleExpand = () => {
