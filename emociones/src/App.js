@@ -60,6 +60,17 @@ function App() {
     }
   }
 
+  const updateEmotion = (emotion) => {
+    let _emotions = [...emotions]
+    for(let i = 0; i < _emotions.length; i++) {
+      if (_emotions[i].name === emotion.name) {
+        _emotions[i] = emotion
+        setEmotions(_emotions)
+        break
+      }
+    }
+  }
+
   const unselectAll = () => {
     let _emotions = [...emotions]
     for(let i = 0; i < _emotions.length; i++) {
@@ -84,6 +95,7 @@ function App() {
                       emotion={emotion}
                       key={emotion.name}
                       select={selectEmotion}
+                      updateEmotion={updateEmotion}
                     />
                   : <></>
                 }

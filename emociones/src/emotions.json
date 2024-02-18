@@ -1,454 +1,567 @@
 [
     {
         "name": "Aburrimiento",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Alegría",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Alivio",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Amor",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Angustia",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Ansiedad",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Añoranza",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Apatía",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Apego",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Armonía",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Arrojo",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Asco",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Asombro",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Calma",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Cariño",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Celos",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Cólera",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Compasión",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Confianza",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Confusión",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Congoja",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Culpa",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Curiosidad",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Decepción",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Depresión",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Desamparo",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Desamor",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Desánimo",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Desasosiego",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Desconcierto",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Desconfianza",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Desconsuelo",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Deseo",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Desesperación",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Desgano",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Desidia",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Desolación",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Desprecio",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Dolor",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Duelo",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Ecuanimidad",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Enfado",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Enojo",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Entusiasmo",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Envidia",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Empatía",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Espanto",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Esperanza",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Estupor",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Euforia",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Excitación",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Éxtasis",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Fastidio",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Frustación",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Fobia",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Hastío",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Hostilidad",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Humillación",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Impaciencia",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Impotencia",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Indiferencia",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Indignación",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Inquietud",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Insatisfacción",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Inseguridad",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Interes",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Intriga",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Ira",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Irritación",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Lujuria",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Melancolía",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Mezquindad",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Miedo",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Nostalgia",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Obnubilación",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Obstinación",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Odio",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Omnipotencia",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Optimismo",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Paciencia",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Pánico",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Pasión",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Pena",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Pereza",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Pesimismo",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Placer",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Plenitud",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Prepotencia",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Rabia",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Rebeldía",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Recelo",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Rechazo",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Regocijo",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Rencor",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Repudio",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Resentimiento",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Resignación",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Resquemor",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Satisfacción",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Seguridad",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Serenidad",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Solidaridad",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Sorpresa",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Temor",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Templanza",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Ternura",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Terror",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Timidez",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Tranquilidad",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Tristeza",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Vacío existencial",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Valentía",
+        "notes": "",
         "selected": false
     },
     {
         "name": "Vergüenza",
+        "notes": "",
         "selected": false
     }
 ]
