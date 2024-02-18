@@ -58,3 +58,8 @@
     max-height: 500px;
     transition: max-height 1s 0s ease-in, margin-top 0.5s 0s ease-in;
 }
+
+.emotion-content-title {
+    color: #33495D;
+    font-weight: bold;
+}

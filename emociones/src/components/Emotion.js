@@ -47,7 +47,7 @@ export default function Emotion(props) {
         </div>
       </div>
       <div className={"emotion-content-container " + (expanded ? "emotion-content-container-expanded" : "emotion-content-container-no-expanded")}>
-          Notas:
+          <span className="emotion-content-title">Notas:</span>
           <TextField
             id="notes"
             multiline
