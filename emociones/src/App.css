@@ -29,6 +29,14 @@
   padding-bottom: 60px;
 }
 
+@media screen and (min-width:600px) {
+  .emotions {
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 .buttons {
   position: fixed;
   right: 0;
