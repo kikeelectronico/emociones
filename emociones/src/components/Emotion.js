@@ -30,7 +30,7 @@ export default function Emotion(props) {
 
   return (
     <>
-    { emotion ?
+    { emotion !== null ?
       <div
           className={"emotion-container" + (emotion.selected ? " emotion-selected" : "")}        
           onClick={() => {props.select(props.emotion)}}
