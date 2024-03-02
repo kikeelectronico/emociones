@@ -121,7 +121,7 @@ function App() {
         </IconButton>
       </section>
       {
-        !filtered ? <Footer/> : <></>
+        !filtered && emotions.length !== 0 ? <Footer/> : <></>
       }
     </div>
   );
