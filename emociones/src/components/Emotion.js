@@ -34,7 +34,7 @@ export default function Emotion(props) {
   useEffect(() => {
     if (emotion) {
       let _links = []
-      let _text = emotion.notes.split(" ")
+      let _text = emotion.notes.split(/\n| /)
       for (let i = 0; i < _text.length; i++) {
         if (_text[i].includes("https")) {
           console.log(_text)
