@@ -8,7 +8,7 @@ import "./emotion.css"
 export default function Emotion(props) {
 
   const [expanded, setExpanded] = useState(false)
-  const [emotion, setEmotion] = useState({})
+  const [emotion, setEmotion] = useState(null)
 
   useEffect(() => {
     setEmotion(props.emotion)
@@ -29,51 +29,54 @@ export default function Emotion(props) {
   }
 
   return (
-    <div
-        className={"emotion-container" + (emotion.selected ? " emotion-selected" : "")}        
-        onClick={() => {props.select(props.emotion)}}
-    >
-      <div className="emotion-header">
-        <span className="emotion-name">
-            {props.emotion.name}
-        </span>
-        <div className="emotion-icons">
-          {
-            props.emotion.notes.length > 0 ?
-              <NotesOutlinedIcon className="iconStyle"/>
-            :
-              <></>
-          }
+    <>
+    { emotion ?
+      <div
+          className={"emotion-container" + (emotion.selected ? " emotion-selected" : "")}        
+          onClick={() => {props.select(props.emotion)}}
+      >
+        <div className="emotion-header">
+          <span className="emotion-name">
+              {props.emotion.name}
+          </span>
+          <div className="emotion-icons">
+            {
+              emotion.notes.length > 0 ?
+                <NotesOutlinedIcon className="iconStyle"/>
+              :
+                <></>
+            }
+          </div>
+          <div className="emotion-expand">
+            {
+              !expanded ?
+                <ExpandMoreIcon onClick={toggleExpand}/>
+              :
+                <ExpandLessIcon onClick={toggleExpand}/>
+            }
+            
+          </div>
         </div>
-        <div className="emotion-expand">
-          {
-            !expanded ?
-              <ExpandMoreIcon onClick={toggleExpand}/>
-            :
-              <ExpandLessIcon onClick={toggleExpand}/>
-          }
-          
+        <div className={"emotion-content-container " + (expanded ? "emotion-content-container-expanded" : "emotion-content-container-no-expanded")}>
+            <span className="emotion-content-title">Notas:</span>
+            <TextField
+              id="notes"
+              multiline
+              minRows={4}
+              variant="standard"
+              className="text-field"
+              value={emotion.notes}
+              onClick={() => {
+                props.select(props.emotion)
+              }}
+              onChange={(event) => {
+                let _emotion = {...emotion}
+                _emotion["notes"] = event.target.value
+                setEmotion(_emotion)
+              }}
+            />
         </div>
       </div>
-      <div className={"emotion-content-container " + (expanded ? "emotion-content-container-expanded" : "emotion-content-container-no-expanded")}>
-          <span className="emotion-content-title">Notas:</span>
-          <TextField
-            id="notes"
-            multiline
-            minRows={4}
-            variant="standard"
-            className="text-field"
-            value={emotion.notes}
-            onClick={() => {
-              props.select(props.emotion)
-            }}
-            onChange={(event) => {
-              let _emotion = {...emotion}
-              _emotion["notes"] = event.target.value
-              setEmotion(_emotion)
-            }}
-          />
-        </div>
-    </div>
+    : <></> }</>
   )
 }
