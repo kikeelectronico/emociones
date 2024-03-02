@@ -43,3 +43,13 @@
 .text-field {
   color: #35495A;
 }
+
+.chips-container {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.link-chip {
+  margin-bottom: 10px;
+}

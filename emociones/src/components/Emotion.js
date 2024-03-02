@@ -3,12 +3,14 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import NotesOutlinedIcon from '@mui/icons-material/NotesOutlined';
 import TextField from '@mui/material/TextField';
+import Chip from '@mui/material/Chip';
 import "./emotion.css"
 
 export default function Emotion(props) {
 
   const [expanded, setExpanded] = useState(false)
   const [emotion, setEmotion] = useState(null)
+  const [links, setLinks] = useState([])
 
   useEffect(() => {
     if (!Object.keys(props.emotion).includes("notes")) {
@@ -19,7 +21,6 @@ export default function Emotion(props) {
     } else {
       setEmotion(props.emotion)
     }
-
   }, [props.emotion])
 
   useEffect(() => {
@@ -28,6 +29,22 @@ export default function Emotion(props) {
     }, 1000)
 
     return () => clearTimeout(update_timeout)
+  }, [emotion])
+
+  useEffect(() => {
+    if (emotion) {
+      let _links = []
+      let _text = emotion.notes.split(" ")
+      for (let i = 0; i < _text.length; i++) {
+        if (_text[i].includes("https")) {
+          console.log(_text)
+          _links.push({
+            "url": _text[i]
+          })
+        }
+      }
+      setLinks(_links)
+    }
   }, [emotion])
 
   const toggleExpand = () => {
@@ -83,6 +100,25 @@ export default function Emotion(props) {
                 setEmotion(_emotion)
               }}
             />
+            <div className="chips-container">
+              {
+                links.map((link) => {
+                  return (
+                    <div className="link-chip">
+                      <Chip
+                        label={link.url}
+                        onClick={() => {
+                          props.select(props.emotion)
+                          window.open(link.url, '_blank').focus()
+                        }}
+                      />
+                    </div>  
+                  )
+                })
+              }            
+            </div>
+            
+
         </div>
       </div>
     : <></> }</>
