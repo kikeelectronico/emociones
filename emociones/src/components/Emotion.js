@@ -60,7 +60,7 @@ export default function Emotion(props) {
           <TextField
             id="notes"
             multiline
-            rows={4}
+            minRows={4}
             variant="standard"
             className="text-field"
             value={emotion.notes}
