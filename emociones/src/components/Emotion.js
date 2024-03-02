@@ -12,13 +12,14 @@ export default function Emotion(props) {
 
   useEffect(() => {
     setEmotion(props.emotion)
-    if (!Object.keys(props.emotion).includes("notes")) {
+    try {
+      let test = props.emotion.notes
+    } catch {
       let _emotion = {...emotion}
       _emotion["notes"] = ""
       setEmotion(_emotion)
       props.updateEmotion(emotion)
     }
-
   }, [props.emotion])
 
   useEffect(() => {
@@ -34,7 +35,7 @@ export default function Emotion(props) {
     setExpanded(!expanded)
     props.select(props.emotion)
   }
-
+  
   return (
     <>
     { emotion !== null ?
