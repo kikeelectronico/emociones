@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react";
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
+import NotesOutlinedIcon from '@mui/icons-material/NotesOutlined';
 import TextField from '@mui/material/TextField';
 import "./emotion.css"
 
@@ -36,6 +37,14 @@ export default function Emotion(props) {
         <span className="emotion-name">
             {props.emotion.name}
         </span>
+        <div className="emotion-icons">
+          {
+            props.emotion.notes.length > 0 ?
+              <NotesOutlinedIcon className="iconStyle"/>
+            :
+              <></>
+          }
+        </div>
         <div className="emotion-expand">
           {
             !expanded ?
