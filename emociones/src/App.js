@@ -5,6 +5,7 @@ import FilterListOffIcon from '@mui/icons-material/FilterListOff';
 import DeselectIcon from '@mui/icons-material/Deselect';
 
 import './App.css';
+import Header from "./components/Header";
 import Emotion from './components/Emotion';
 import Footer from "./components/Footer";
 
@@ -81,9 +82,7 @@ function App() {
 
   return (
     <div className="App">
-      <header className="header">
-       <h1>Emociones</h1>
-      </header>
+      <Header/>
       <section className="emotions">
         {
           emotions.map(emotion => {
