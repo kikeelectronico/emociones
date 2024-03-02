@@ -13,7 +13,7 @@ export default function Emotion(props) {
   useEffect(() => {
     setEmotion(props.emotion)
     try {
-      let test = props.emotion.notes.length
+      console.log(props.emotion.notes.length)
     } catch {
       let _emotion = {...emotion}
       _emotion["notes"] = ""
