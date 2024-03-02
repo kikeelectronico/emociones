@@ -12,14 +12,13 @@ export default function Emotion(props) {
 
   useEffect(() => {
     setEmotion(props.emotion)
-    try {
-      console.log(props.emotion.notes.length)
-    } catch {
+    if (!Object.keys(props.emotion).includes("notes")) {
       let _emotion = {...emotion}
       _emotion["notes"] = ""
       setEmotion(_emotion)
       props.updateEmotion(emotion)
     }
+
   }, [props.emotion])
 
   useEffect(() => {
