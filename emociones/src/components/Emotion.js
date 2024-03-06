@@ -13,7 +13,14 @@ export default function Emotion(props) {
   const [links, setLinks] = useState([])
 
   useEffect(() => {
-    setEmotion(props.emotion)
+    if (!Object.keys(props.emotion).includes("notes")) {
+      let _emotion = {...props.emotion}
+      _emotion["notes"] = ""
+      // setEmotion(_emotion)
+      props.updateEmotion(_emotion)
+    } else {
+      setEmotion(props.emotion)
+    }
   }, [props.emotion])
 
   useEffect(() => {
