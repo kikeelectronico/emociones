@@ -60,7 +60,7 @@
 
 .emotion-content-container-expanded {
     margin-top: 10px;
-    max-height: 500px;
+    max-height: 1000px;
     transition: max-height 1s 0s ease-in, margin-top 0.5s 0s ease-in;
 }
 
