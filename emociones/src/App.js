@@ -35,7 +35,8 @@ function App() {
   useEffect(() => {
     if (filtered !== null)
       localStorage.setItem("filtered", filtered)
-      if (filtered) setMenuYDelta(0)
+      if (filtered) setMenuYDelta(41)
+      else setMenuYDelta(0)
   }, [filtered])
 
   useEffect(() => {
@@ -48,7 +49,7 @@ function App() {
           setMenuYDelta(0)
       }
     })
-  }, [filtered])
+  }, [])
 
   const selectEmotion = (emotion) => {
     let _emotions = [...emotions]
