@@ -22,7 +22,7 @@ export default function Emotion(props) {
     }, 1000)
 
     return () => clearTimeout(update_timeout)
-  }, [emotion])
+  }, [props, emotion])
 
   useEffect(() => {
     if (emotion) {
