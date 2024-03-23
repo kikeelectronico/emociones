@@ -1,6 +1,7 @@
 .App {
   text-align: center;
   position: relative;
+  min-height: calc(100vh - 80px);
 }
 
 .emotions {

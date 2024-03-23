@@ -119,9 +119,7 @@ function App() {
           <DeselectIcon/>
         </IconButton>
       </section>
-      {
-        !filtered && emotions.length !== 0 ? <Footer/> : <></>
-      }
+      <Footer/> 
     </div>
   );
 }
