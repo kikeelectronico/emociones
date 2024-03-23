@@ -31,6 +31,11 @@ function App() {
       localStorage.setItem("emotions", JSON.stringify(emotions))
   }, [emotions])
 
+  useEffect(() => {
+    if (filtered !== null)
+      localStorage.setItem("filtered", filtered)
+  }, [filtered])
+
   const selectEmotion = (emotion) => {
     let _emotions = [...emotions]
     for(let i = 0; i < _emotions.length; i++) {
