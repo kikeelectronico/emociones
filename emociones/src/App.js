@@ -83,7 +83,10 @@ function App() {
             )
           })
         }
-      </section>    
+      </section>
+      <section className="spacer">
+        
+      </section>
       <section className="buttons">   
         <IconButton
           aria-label="Mostrar emociones seleccionadas"
