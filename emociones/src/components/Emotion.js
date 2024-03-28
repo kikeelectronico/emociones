@@ -96,7 +96,7 @@ export default function Emotion(props) {
               {
                 links.map((link) => {
                   return (
-                    <div className="link-chip">
+                    <div className="link-chip" key={link.url}>
                       <Chip
                         label={link.url}
                         onClick={() => {
