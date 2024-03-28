@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react";
 import IconButton from '@mui/material/IconButton';
 import FilterListIcon from '@mui/icons-material/FilterList';
 import FilterListOffIcon from '@mui/icons-material/FilterListOff';
+import TextSnippetIcon from '@mui/icons-material/TextSnippet';
 
 import './App.css';
 import Header from "./components/Header";
@@ -16,6 +17,7 @@ function App() {
 
   const [filtered, setFiltered] = useState(null)
   const [selected, setSelected] = useState(0)
+  const [modal, setModal] = useState(false)
 
   useEffect(() => {
     let _selected = 0
@@ -89,6 +91,12 @@ function App() {
           {
             !filtered ? <FilterListIcon className="iconButton"/> : <FilterListOffIcon  className="iconButton"/>
           }
+        </IconButton>
+        <IconButton
+          aria-label="Mostrar emociones seleccionadas"
+          onClick={() => setModal(!modal)}
+        >
+          <TextSnippetIcon  className="iconButton"/>
         </IconButton>
       </section>
       <Footer/> 
