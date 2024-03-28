@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react";
 import IconButton from '@mui/material/IconButton';
 import FilterListIcon from '@mui/icons-material/FilterList';
 import FilterListOffIcon from '@mui/icons-material/FilterListOff';
-import TextSnippetIcon from '@mui/icons-material/TextSnippet';
+import TextSnippetOutlinedIcon from '@mui/icons-material/TextSnippetOutlined';
 
 import './App.css';
 import Header from "./components/Header";
@@ -97,7 +97,7 @@ function App() {
           aria-label="Mostrar emociones seleccionadas"
           onClick={() => setModal(!modal)}
         >
-          <TextSnippetIcon  className="iconButton"/>
+          <TextSnippetOutlinedIcon  className="iconButton"/>
         </IconButton>
       </section>
       <Footer/> 
