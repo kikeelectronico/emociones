@@ -8,6 +8,7 @@ import './App.css';
 import Header from "./components/Header";
 import Emotion from './components/Emotion';
 import Footer from "./components/Footer";
+import Modal from "./components/Modal";
 
 let local_emotions = localStorage.getItem("emotions")
 let emotions_list = require("./emotions.json")
@@ -17,7 +18,7 @@ function App() {
 
   const [filtered, setFiltered] = useState(null)
   const [selected, setSelected] = useState(0)
-  const [modal, setModal] = useState(false)
+  const [modal, setModal] = useState(true)
 
   useEffect(() => {
     let _selected = 0
@@ -100,6 +101,7 @@ function App() {
         </IconButton>
       </section>
       <Footer/> 
+      <Modal visible={modal}/>
     </div>
   );
 }
