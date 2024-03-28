@@ -95,13 +95,13 @@ function App() {
         </IconButton>
         <IconButton
           aria-label="Mostrar emociones seleccionadas"
-          onClick={() => setModal(!modal)}
+          onClick={() => setModal(true)}
         >
           <TextSnippetOutlinedIcon  className="iconButton"/>
         </IconButton>
       </section>
       <Footer/> 
-      <Modal visible={modal}/>
+      <Modal visible={modal} closeModal={() => {setModal(false)}}/>
     </div>
   );
 }

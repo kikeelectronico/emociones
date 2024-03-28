@@ -21,7 +21,14 @@
     background-color: #f4f4f4;
 }
 
+.modal-close {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+}
+
 .modal-title {
+    margin-top: 0px;
     font-size: 25px;
     color: #33495D;
 }

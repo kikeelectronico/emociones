@@ -1,5 +1,6 @@
 import React from "react";
 import IconButton from '@mui/material/IconButton';
+import CloseOutlinedIcon from '@mui/icons-material/CloseOutlined';
 import FileDownloadOutlinedIcon from '@mui/icons-material/FileDownloadOutlined';
 import FileUploadOutlinedIcon from '@mui/icons-material/FileUploadOutlined';
 
@@ -30,6 +31,14 @@ export default function Modal(props) {
             props.visible ?
                 <div className="modal-background">
                     <div className="modal-container">
+                        <div className="modal-close">
+                            <IconButton
+                                aria-label="Descargar datos"
+                                onClick={props.closeModal}
+                            >
+                                <CloseOutlinedIcon className="iconButton"/>
+                            </IconButton>
+                        </div>
                         <h1 className="modal-title">Tus datos</h1>
                         <div className="modal-text">
                             <p>
@@ -47,13 +56,13 @@ export default function Modal(props) {
                                 aria-label="Descargar datos"
                                 onClick={() => download()}
                             >
-                                <FileDownloadOutlinedIcon  className="iconButton"/>
+                                <FileDownloadOutlinedIcon className="iconButton"/>
                             </IconButton>
                             <IconButton
                                 aria-label="Restaurar datos"
                                 onClick={() => upload()}
                             >
-                                <FileUploadOutlinedIcon  className="iconButton"/>
+                                <FileUploadOutlinedIcon className="iconButton"/>
                             </IconButton>
                         </div>
                     </div>
