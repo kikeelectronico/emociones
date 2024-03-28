@@ -37,6 +37,7 @@ export default function Emotion(props) {
   }
 
   const selectEmotion = () => {
+    props.updateSelected(emotion.selected ? "remove" : "add")
     let _emotion = {...emotion}
     _emotion["selected"] = !_emotion.selected
     props.updateEmotion(_emotion)

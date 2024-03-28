@@ -15,6 +15,17 @@ let emotions = local_emotions ? JSON.parse(local_emotions) : emotions_list
 function App() {
 
   const [filtered, setFiltered] = useState(null)
+  const [selected, setSelected] = useState(0)
+
+  useEffect(() => {
+    let _selected = 0
+    for(let i = 0; i < emotions.length; i++) {
+      if (emotions[i].selected) {
+        _selected += 1 
+      }
+    }
+    setSelected(_selected)
+  }, [])
 
   useEffect(() => {
     let local_filtered = localStorage.getItem("filtered")
@@ -36,10 +47,23 @@ function App() {
     localStorage.setItem("emotions", JSON.stringify(emotions))
   }
 
+  const updateSelected = (change) => {
+    if (change === "add") setSelected(selected+1)
+    else if (change === "remove") setSelected(selected-1)
+  }
+
   return (
     <div className="App">
       <Header/>
       <section className="emotions">
+        {
+          filtered && selected === 0 ?
+            <div className="no-emotions-container">
+              No hay emociones seleccionadas
+            </div>
+          :
+            <></>
+        }
         {
           emotions.map(emotion => {
             return (
@@ -47,6 +71,7 @@ function App() {
                 emotion={emotion}
                 key={emotion.name}
                 filtered={filtered}
+                updateSelected={updateSelected}
                 updateEmotion={updateEmotion}
               />
             )
