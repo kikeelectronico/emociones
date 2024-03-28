@@ -17,14 +17,6 @@ export default function Emotion(props) {
   }, [props.emotion])
 
   useEffect(() => {
-    const update_timeout = setTimeout(() => {
-      props.updateEmotion(emotion)
-    }, 1000)
-
-    return () => clearTimeout(update_timeout)
-  }, [props, emotion])
-
-  useEffect(() => {
     if (emotion) {
       let _links = []
       let _text = emotion.notes.split(/\n| /)
@@ -42,21 +34,30 @@ export default function Emotion(props) {
   const toggleExpand = () => {
     if (expanded) props.updateEmotion(emotion)
     setExpanded(!expanded)
-    props.select(props.emotion)
+  }
+
+  const selectEmotion = () => {
+    let _emotion = {...emotion}
+    _emotion["selected"] = !_emotion.selected
+    props.updateEmotion(_emotion)
+    setEmotion(_emotion)
   }
   
   return (
     <>
     { emotion !== null ?
-      <div
-          className={"emotion-container" + (emotion.selected ? " emotion-selected" : "")}        
-          onClick={() => {props.select(props.emotion)}}
-      >
+      <div className={"emotion-container" + (emotion.selected ? " emotion-selected" : "")}>
         <div className="emotion-header">
-          <span className="emotion-name">
+          <span
+            className="emotion-name"
+            onClick={selectEmotion}
+          >
               {props.emotion.name}
           </span>
-          <div className="emotion-icons">
+          <div
+            className="emotion-icons"
+            onClick={selectEmotion}
+          >
             {
               emotion.notes.length > 0 ?
                 <NotesOutlinedIcon className="iconStyle"/>
@@ -83,12 +84,10 @@ export default function Emotion(props) {
               variant="standard"
               className="text-field"
               value={emotion.notes}
-              onClick={() => {
-                props.select(props.emotion)
-              }}
               onChange={(event) => {
                 let _emotion = {...emotion}
                 _emotion["notes"] = event.target.value
+                props.updateEmotion(_emotion)
                 setEmotion(_emotion)
               }}
             />
@@ -100,7 +99,6 @@ export default function Emotion(props) {
                       <Chip
                         label={link.url}
                         onClick={() => {
-                          props.select(props.emotion)
                           window.open(link.url, '_blank').focus()
                         }}
                       />
@@ -108,9 +106,7 @@ export default function Emotion(props) {
                   )
                 })
               }            
-            </div>
-            
-
+            </div>          
         </div>
       </div>
     : <></> }</>
