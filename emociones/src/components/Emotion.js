@@ -45,7 +45,7 @@ export default function Emotion(props) {
   
   return (
     <>
-    { emotion !== null ?
+    { emotion !== null && (!props.filtered || (props.filtered && emotion.selected)) ?
       <div className={"emotion-container" + (emotion.selected ? " emotion-selected" : "")}>
         <div className="emotion-header">
           <span

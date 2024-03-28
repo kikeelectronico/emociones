@@ -43,17 +43,12 @@ function App() {
         {
           emotions.map(emotion => {
             return (
-              <>
-                {
-                  !filtered || (filtered && emotion.selected) ?
-                    <Emotion 
-                      emotion={emotion}
-                      key={emotion.name}
-                      updateEmotion={updateEmotion}
-                    />
-                  : <></>
-                }
-              </>
+              <Emotion 
+                emotion={emotion}
+                key={emotion.name}
+                filtered={filtered}
+                updateEmotion={updateEmotion}
+              />
             )
           })
         }
