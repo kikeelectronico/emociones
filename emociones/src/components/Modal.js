@@ -33,10 +33,10 @@ export default function Modal(props) {
                         <h1 className="modal-title">Tus datos</h1>
                         <div className="modal-text">
                             <p>
-                                Esta aplicación guarda dos tipos de datos: las notas que añadas a cada emoción y el estado de selección de cada una de ellas.
+                                Esta aplicación guarda dos tipos de datos: las notas que añades a cada emoción y el estado de selección de cada una de ellas.
                             </p>
                             <p>
-                                Los datos se guardan solo en tu dispositivo por lo que solo tu puedes acceder a ellos.
+                                Los datos se guardan solo en tu dispositivo por lo que solo tú puedes acceder a ellos.
                             </p>
                             <p>
                                 Si lo deseas puedes usar los siguientes botones para descargar un archivo con tus datos o importarlos para restaurarlos.
