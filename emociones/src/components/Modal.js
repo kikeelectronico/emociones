@@ -7,6 +7,23 @@ import "./modal.css"
 
 export default function Modal(props) {
 
+    const download = () => {
+
+        let emotions = localStorage.getItem("emotions")    
+
+        var element = document.createElement('a');
+        element.setAttribute('href', 'data:text/json;charset=utf-8,' + encodeURIComponent(emotions));
+        element.setAttribute('download', "mis_emociones.json");
+        element.style.display = 'none';
+        document.body.appendChild(element);
+        element.click();
+        document.body.removeChild(element);
+    }
+
+    const upload = () => {
+
+    }
+
   return (
     <>
         {
@@ -28,13 +45,13 @@ export default function Modal(props) {
                         <div className="modal-buttons">
                             <IconButton
                                 aria-label="Descargar datos"
-                                onClick={() => {}}
+                                onClick={() => download()}
                             >
                                 <FileDownloadOutlinedIcon  className="iconButton"/>
                             </IconButton>
                             <IconButton
                                 aria-label="Restaurar datos"
-                                onClick={() => {}}
+                                onClick={() => upload()}
                             >
                                 <FileUploadOutlinedIcon  className="iconButton"/>
                             </IconButton>
