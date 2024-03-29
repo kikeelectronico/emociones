@@ -23,7 +23,7 @@ const VisuallyHiddenInput = styled('input')({
 
 export default function Modal(props) {
 
-    const download = () => {
+    const exportData = () => {
         let emotions = localStorage.getItem("emotions")
         let data = "{\"emotions\": " + emotions + "}"    
 
@@ -73,7 +73,7 @@ export default function Modal(props) {
                                 Los datos se guardan solo en tu dispositivo por lo que solo tú puedes acceder a ellos.
                             </p>
                             <p>
-                                Si lo deseas puedes usar los siguientes botones para descargar un archivo con tus datos o importarlos para restaurarlos.
+                                Si lo deseas puedes usar los siguientes botones para exportar un archivo con tus datos o importarlo para restaurarlos.
                             </p>
                         </div>
                         <div className="modal-buttons">
@@ -83,9 +83,9 @@ export default function Modal(props) {
                                 variant="outlined"
                                 tabIndex={-1}
                                 startIcon={<FileDownloadOutlinedIcon className="iconButton" />}
-                                onClick={download}
+                                onClick={exportData}
                             >
-                                <span className="textButton"> Descargar </span>
+                                <span className="textButton"> Exportar </span>
                             </Button>
                             <Button
                                 component="label"
