@@ -46,3 +46,15 @@
     justify-content: center;
     align-items: center;
 }
+
+.modal-buttons > label {
+    border: none;
+}
+
+.modal-buttons > label:focus {
+    border: none;
+}
+
+.modal-buttons > label:hover {
+    border: none;
+}

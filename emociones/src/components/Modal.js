@@ -1,19 +1,34 @@
 import React from "react";
 import IconButton from '@mui/material/IconButton';
+import Button from '@mui/material/Button';
 import CloseOutlinedIcon from '@mui/icons-material/CloseOutlined';
 import FileDownloadOutlinedIcon from '@mui/icons-material/FileDownloadOutlined';
 import FileUploadOutlinedIcon from '@mui/icons-material/FileUploadOutlined';
+import { styled } from '@mui/material/styles';
+
 
 import "./modal.css"
+
+const VisuallyHiddenInput = styled('input')({
+    clip: 'rect(0 0 0 0)',
+    clipPath: 'inset(50%)',
+    height: 1,
+    overflow: 'hidden',
+    position: 'absolute',
+    bottom: 0,
+    left: 0,
+    whiteSpace: 'nowrap',
+    width: 1,
+  });
 
 export default function Modal(props) {
 
     const download = () => {
-
-        let emotions = localStorage.getItem("emotions")    
+        let emotions = localStorage.getItem("emotions")
+        let data = "{\"emotions\": " + emotions + "}"    
 
         var element = document.createElement('a');
-        element.setAttribute('href', 'data:text/json;charset=utf-8,' + encodeURIComponent(emotions));
+        element.setAttribute('href', 'data:text/json;charset=utf-8,' + encodeURIComponent(data));
         element.setAttribute('download', "mis_emociones.json");
         element.style.display = 'none';
         document.body.appendChild(element);
@@ -21,8 +36,16 @@ export default function Modal(props) {
         document.body.removeChild(element);
     }
 
-    const upload = () => {
-
+    const importData = (event) => {
+        const file = event.target.files[0]
+        const reader = new FileReader()
+        reader.readAsText(file)
+        reader.onload = () => {
+            console.log(reader.result)
+        }
+        reader.onerror = () => {
+            console.log("Imposible to read")
+        }
     }
 
   return (
@@ -52,18 +75,26 @@ export default function Modal(props) {
                             </p>
                         </div>
                         <div className="modal-buttons">
-                            <IconButton
-                                aria-label="Descargar datos"
-                                onClick={() => download()}
+                            <Button
+                                component="label"
+                                role={undefined}
+                                variant="outlined"
+                                tabIndex={-1}
+                                startIcon={<FileDownloadOutlinedIcon className="iconButton" />}
+                                onClick={download}
                             >
-                                <FileDownloadOutlinedIcon className="iconButton"/>
-                            </IconButton>
-                            <IconButton
-                                aria-label="Restaurar datos"
-                                onClick={() => upload()}
+                                <span className="textButton"> Descargar </span>
+                            </Button>
+                            <Button
+                                component="label"
+                                role={undefined}
+                                variant="outlined"
+                                tabIndex={-1}
+                                startIcon={<FileUploadOutlinedIcon className="iconButton" />}
                             >
-                                <FileUploadOutlinedIcon className="iconButton"/>
-                            </IconButton>
+                                <span className="textButton"> Importar </span>
+                                <VisuallyHiddenInput type="file" onChange={importData} />
+                            </Button>
                         </div>
                     </div>
                 </div>
