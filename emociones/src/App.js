@@ -18,7 +18,7 @@ function App() {
 
   const [filtered, setFiltered] = useState(null)
   const [selected, setSelected] = useState(0)
-  const [modal, setModal] = useState(true)
+  const [modal, setModal] = useState(false)
 
   useEffect(() => {
     let _selected = 0
