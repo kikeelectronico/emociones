@@ -2,7 +2,10 @@ name: Prod - Build and Deploy
 
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main
+    paths:
+      - "emociones/**"
 
 env:
   PROJECT_ID: ${{ secrets.PROJECT_ID }}
