@@ -41,7 +41,9 @@ export default function Modal(props) {
         const reader = new FileReader()
         reader.readAsText(file)
         reader.onload = () => {
-            console.log(reader.result)
+            const emotions = JSON.parse(reader.result)["emotions"]
+            localStorage.setItem("emotions", JSON.stringify(emotions))
+            window.location.reload()
         }
         reader.onerror = () => {
             console.log("Imposible to read")
