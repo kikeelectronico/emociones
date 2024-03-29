@@ -26,10 +26,10 @@ export default function Modal(props) {
     const exportData = () => {
         let emotions = localStorage.getItem("emotions")
         let data = "{\"emotions\": " + emotions + "}"    
-
+        var now = new Date().toLocaleString("es-ES").replace(", ", "_");
         var element = document.createElement('a');
         element.setAttribute('href', 'data:text/json;charset=utf-8,' + encodeURIComponent(data));
-        element.setAttribute('download', "mis_emociones.json");
+        element.setAttribute('download', "mis_emociones_" + now + ".json");
         element.style.display = 'none';
         document.body.appendChild(element);
         element.click();
