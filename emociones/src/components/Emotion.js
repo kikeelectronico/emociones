@@ -98,7 +98,7 @@ export default function Emotion(props) {
                   return (
                     <div className="link-chip" key={link.url}>
                       <Chip
-                        label={link.url}
+                        label={link.url.split("://")[1]}
                         onClick={() => {
                           window.open(link.url, '_blank').focus()
                         }}
