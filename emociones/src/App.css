@@ -10,8 +10,11 @@
   margin-left: 5%;
 }
 
-.spacer {
+.add {
+  width: 90%;
   min-height: 200px;
+  margin-top: 10px;
+  margin-left: 5%;
 }
 
 .no-emotions-container {

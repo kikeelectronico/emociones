@@ -9,6 +9,7 @@ import Header from "./components/Header";
 import Emotion from './components/Emotion';
 import Footer from "./components/Footer";
 import Modal from "./components/Modal";
+import AddEmotion from "./components/AddEmotion";
 
 let local_emotions = localStorage.getItem("emotions")
 let emotions_list = require("./emotions.json")
@@ -81,8 +82,10 @@ function App() {
           })
         }
       </section>
-      <section className="spacer">
-        
+      <section className="add">
+        {
+          filtered ? <></> : <AddEmotion/>
+        }
       </section>
       <section className="buttons">   
         <IconButton
