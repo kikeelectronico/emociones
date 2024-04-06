@@ -18,6 +18,7 @@ export default function AddEmotionModal(props) {
             "notes": "",
             "selected": false
         })
+        emotions.sort((a, b) => a.name.localeCompare(b.name))
         localStorage.setItem("emotions", JSON.stringify(emotions))
         window.location.reload()
     }
