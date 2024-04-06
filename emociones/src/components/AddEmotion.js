@@ -4,6 +4,7 @@ import "./addEmotions.css"
 export default function AddEmotion(props) {
 
   const [show_button, setShowButton] = useState(false)
+  const [show_modal, setShowModal] = useState(false)
 
   useEffect(() => {
     setTimeout(() => setShowButton(true), 1000)
@@ -13,7 +14,7 @@ export default function AddEmotion(props) {
     <>
       {
         !show_button ? <></> : 
-        <div className="add-container">
+        <div className="add-container" onClick={() => setShowModal(true)}>
             <span className="add-title">
                 Añadir emoción
             </span>
