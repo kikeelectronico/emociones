@@ -40,6 +40,25 @@
     color: #33495D;
 }
 
+.modal-form-container {
+    width: 80%;
+    margin-left: 10%;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    color: #33495D;
+    overflow: hidden;
+}
+
+.modal-form-container > div > div > input{
+    color: #33495D;
+}
+
+.modal-form-container > div > div::after{
+    border-bottom: 2px solid #33495D;
+}
+
 .modal-buttons {
     display: flex;
     flex-direction: row;
