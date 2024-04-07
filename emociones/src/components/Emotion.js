@@ -1,9 +1,14 @@
 import React, {useState, useEffect} from "react";
+import IconButton from '@mui/material/IconButton';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import NotesOutlinedIcon from '@mui/icons-material/NotesOutlined';
+import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 import TextField from '@mui/material/TextField';
 import Chip from '@mui/material/Chip';
+
+import DeleteEmotionModal from "./DeleteEmotionModal";
+
 import "./emotion.css"
 
 export default function Emotion(props) {
@@ -11,6 +16,7 @@ export default function Emotion(props) {
   const [expanded, setExpanded] = useState(false)
   const [emotion, setEmotion] = useState(null)
   const [links, setLinks] = useState([])
+  const [show_modal, setShowModal] = useState(false)
 
   useEffect(() => {
     setEmotion(props.emotion)
@@ -107,8 +113,17 @@ export default function Emotion(props) {
                   )
                 })
               }            
-            </div>          
+            </div>
+            <div className="emotion-actions">
+            <IconButton
+              aria-label="Eliminar emoción"
+              onClick={() => setShowModal(true)}
+            >
+              <DeleteForeverIcon  className="iconButton"/>
+            </IconButton>
+            </div>
         </div>
+        <DeleteEmotionModal emotion_name={emotion.name} visible={show_modal} closeModal={() => {setShowModal(false)}}/>
       </div>
     : <></> }</>
   )
