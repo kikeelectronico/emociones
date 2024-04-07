@@ -32,6 +32,11 @@ function App() {
   }, [])
 
   useEffect(() => {
+    if (localStorage.getItem("emotions") === null) 
+      localStorage.setItem("emotions", JSON.stringify(emotions))
+  }, [])
+
+  useEffect(() => {
     let local_filtered = localStorage.getItem("filtered")
     setFiltered(local_filtered === "true")
   }, [])
