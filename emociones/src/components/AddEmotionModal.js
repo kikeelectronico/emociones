@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import IconButton from '@mui/material/IconButton';
 import Button from '@mui/material/Button';
 import CloseOutlinedIcon from '@mui/icons-material/CloseOutlined';
-import SaveIcon from '@mui/icons-material/Save';
+import AddIcon from '@mui/icons-material/Add';
 import TextField from '@mui/material/TextField';
 
 import "./modal.css"
@@ -57,10 +57,10 @@ export default function AddEmotionModal(props) {
                                 role={undefined}
                                 variant="outlined"
                                 tabIndex={-1}
-                                startIcon={<SaveIcon className="iconButton" />}
+                                startIcon={<AddIcon className="iconButton" />}
                                 onClick={addEmotion}
                             >
-                                <span className="textButton"> Guardar </span>
+                                <span className="textButton"> Añadir </span>
                             </Button>
                            
                         </div>
