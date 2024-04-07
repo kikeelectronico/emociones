@@ -36,7 +36,7 @@ export default function DeleteEmotionModal(props) {
                         </div>
                         <h1 className="modal-title">Eliminar {props.emotion_name}</h1>
                         <p className="modal-text">
-                            Pulsa el botón para eliminar la emoción de tu lista y las notas guardadas en ella.
+                            Pulsa el botón para eliminar la emoción y las notas guardadas en ella de tu lista.
                         </p>
                         <div className="modal-buttons">
                             <Button
