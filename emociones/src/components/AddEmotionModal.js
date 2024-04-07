@@ -39,7 +39,7 @@ export default function AddEmotionModal(props) {
                         </div>
                         <h1 className="modal-title">Añadir emoción</h1>
                         <p className="modal-text">
-                            Escribe el nombre de la emoción y pulsa el botón para añadirla a tu lista de emociones.
+                            Escribe el nombre de la emoción y pulsa el botón para añadirla a tu lista.
                         </p>
                         <div className="modal-form-container">
                             <TextField
