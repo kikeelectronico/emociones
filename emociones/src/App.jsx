@@ -4,6 +4,7 @@ import FilterListIcon from '@mui/icons-material/FilterList';
 import FilterListOffIcon from '@mui/icons-material/FilterListOff';
 import TextSnippetOutlinedIcon from '@mui/icons-material/TextSnippetOutlined';
 
+import emotions_list from "./emotions.json";
 import './App.css';
 import Header from "./components/Header";
 import Emotion from './components/Emotion';
@@ -12,7 +13,6 @@ import Modal from "./components/Modal";
 import AddEmotion from "./components/AddEmotion";
 
 let local_emotions = localStorage.getItem("emotions")
-let emotions_list = require("./emotions.json")
 let emotions = local_emotions ? JSON.parse(local_emotions) : emotions_list
 
 function App() {
