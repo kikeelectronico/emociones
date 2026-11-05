@@ -9,4 +9,8 @@ updates:
     directory: "/emociones" # Location of package manifests
     schedule:
       interval: "weekly"
+    groups:
+      mui:
+        patterns:
+          - "@mui/*"
     open-pull-requests-limit: 10
