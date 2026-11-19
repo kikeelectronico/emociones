@@ -4,8 +4,6 @@ on:
   push:
     branches:
       - main
-    paths:
-      - "emociones/**"
 
 env:
   PROJECT_ID: ${{ secrets.PROJECT_ID }}
